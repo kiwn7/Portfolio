@@ -1,0 +1,98 @@
+.presentacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  color: #cccfd2;
+  text-shadow: 1px 2px 2px #132024;
+  justify-content: center;
+  height: 100vh;
+  .wave {
+    display: inline-block;
+    font-size: 2.5rem;
+    transform-origin: 70% 70%;
+    animation: wave-hand 2s infinite;
+    display: inline-flex;
+    align-items: center;
+    height: 2rem;
+    margin-left: .5rem;
+  }
+  @keyframes wave-hand {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(14deg);
+    }
+    20% {
+      transform: rotate(-8deg);
+    }
+    30% {
+      transform: rotate(14deg);
+    }
+    40% {
+      transform: rotate(-4deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    60% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  .saludo {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0rem;
+
+    h2 {
+      margin-top: 0;
+      font-size: 2rem;
+      margin-bottom: 0rem;
+      font-weight: 300;
+      opacity: .95;
+      line-height: 1;
+            @media screen and (max-width: 426px) {
+  font-size: 1.4rem;
+  
+}
+    }
+  }
+
+  .typed-wrapped {
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    #typed {
+      display: inline-block;
+      line-height: 1.25;
+      text-align: center;
+      position: relative;
+      @media screen and (max-width: 426px) {
+  font-size: 1.5rem;
+  
+}
+
+      // Cursor propio
+      &::after {
+        content: "|";
+        display: inline-block;
+        margin-left: 0.25rem;
+        animation: blink 0.8s steps(1) infinite;
+      }
+
+      .bold {
+        font-weight: 700;
+        display: inline;
+      }
+  }
+}
+
+
+}

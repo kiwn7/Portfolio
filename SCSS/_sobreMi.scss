@@ -1,0 +1,115 @@
+#sobreMi {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+
+  img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .contenidoSobreMi {
+    background: linear-gradient(
+      180deg,
+      rgba(30, 30, 32, 0.3),
+      rgba(46, 47, 47, 0.2)
+    );
+    width: 80%;
+    color: #cfcfcf;
+    font-size: 1rem;
+    display: flex;
+    padding: 4rem;
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    border-radius: 1rem;
+  }
+
+  .textos {
+    width: 65%;
+    padding: 0rem;
+    padding-left: 4.3rem;
+    h2 {
+      display: flex;
+      flex-direction: column;
+      font-size: 2rem;
+      margin-bottom: 0;
+      font-weight: 400;
+
+      span:last-child {
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-top: 0;
+        opacity: 0.8;
+        margin-bottom: 0.8rem;
+      }
+    }
+    p {
+      margin: 0.8rem 0rem;
+      font-size: 1.2rem;
+      color: #ffffff;
+      line-height: 1.8rem;
+      opacity: 0.8;
+      & b {
+        opacity: 1;
+      }
+      &:last-child {
+        margin-bottom: 0rem;
+      }
+    }
+  }
+  .textos {
+    padding: 0rem;
+    padding-left: 0rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .contenidoSobreMi {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+    }
+    @media screen and (max-width: 426px) {
+      .contenidoSobreMi {
+        padding: 1rem;
+        width: 85%;
+      }
+      .textos {
+        width: 90%;
+        text-align: center;
+        h2 {       
+          font-size: 1.5rem;
+          span:last-child {
+            font-size: 1.3rem;
+          }
+        }
+        p{
+          font-size: 1rem;
+        }
+      }
+    }
+    @media screen and (max-width: 380px) {
+      .contenidoSobreMi {
+        width: 90%;
+      }
+      
+    }
+  }
+}
+
+/* Rectangle 2 */
+
+/*
+box-sizing: border-box;
+
+position: absolute;
+width: 2779px;
+height: 1068px;
+
+
+/* Note: backdrop-filter has minimal browser support */
+/*border-radius: 40px;*/

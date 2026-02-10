@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  background-image: url(../img/space.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  margin: 0px;
+  color: #ededed;
+  font-family: "Inter", sans-serif;
+  flex-direction: column;
+  min-height: 100vh;
+
+  h2.titulo {
+    font-family: "Bricolage Grotesque", sans-serif;
+  }
+}
+
+#sobreMi,
+#proyectos,
+#contacto {
+  scroll-margin-top: 140px;
+}
+
+@import "header";
+@import "presentacion";
+@import "sobreMi";
+@import "proyectos";
+@import "contacto";

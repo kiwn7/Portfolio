@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-agustin-wink",
+  "version": "1.0.0",
+  "description": "Portfolio personal de Agustin Wink con HTML, SCSS y proyectos de desarrollo.",
+  "keywords": [
+    "portfolio",
+    "frontend",
+    "scss",
+    "developer",
+    "web"
+  ],
+  "license": "MIT",
+  "author": "Agustín Wink",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

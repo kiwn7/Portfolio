@@ -1,0 +1,22 @@
+footer {
+  display: flex;
+  flex-direction: wrap;
+  align-items: center;
+  justify-content: center;
+  background: #131313;
+  opacity: .8;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  margin-top: auto;
+
+  h2 {
+    font-weight: 500;
+  }
+
+  h2 > a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #ededed;
+    font-weight: 500;
+  }
+}
