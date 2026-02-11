@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 *,
@@ -37,6 +38,20 @@ body h2.titulo {
   padding: 1rem;
   font-size: 1.1rem;
 }
+#header .menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+#header .nav-mobile {
+  display: none;
+}
+#header .nav-desktop {
+  display: flex;
+}
+#header button.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
 #header nav {
   background: linear-gradient(180deg, rgba(17, 17, 18, 0.3), rgba(46, 47, 47, 0.2));
   backdrop-filter: blur(6px);
@@ -55,6 +70,9 @@ body h2.titulo {
   display: flex;
   align-items: center;
   font-weight: 400;
+  color: #cfcfcf;
+  text-decoration: none;
+  transition: 0.3s ease, transform 0.2s ease-in-out;
 }
 #header nav a.pagina {
   font-weight: bold;
@@ -74,11 +92,6 @@ body h2.titulo {
   align-items: flex-start;
   height: 3rem;
   width: auto;
-}
-#header nav a {
-  color: #cfcfcf;
-  text-decoration: none;
-  transition: 0.3s ease, transform 0.2s ease-in-out;
 }
 #header nav a:hover {
   color: #b3b3b3;
@@ -110,9 +123,70 @@ body h2.titulo {
     padding-right: 0;
   }
 }
-@media (max-width: 768px) and (max-width: 425px) {
-  #header nav {
-    width: 85%;
+@media (max-width: 768px) and (max-width: 426px) {
+  #header {
+    /* ocultar nav desktop */
+  }
+  #header .nav-desktop {
+    display: none;
+  }
+  #header {
+    /* BOTÓN HAMBURGUESA */
+  }
+  #header .menu-toggle {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+  }
+  #header .menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background: white;
+    transition: 0.3s;
+  }
+  #header {
+    /* menú */
+  }
+  #header .nav-mobile {
+    position: fixed;
+    inset: 0;
+    font-weight: 400;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9000;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+  #header .nav-mobile a {
+    margin-bottom: 6px;
+  }
+  #header {
+    /* estado abierto */
+  }
+  #header #menu-toggle:checked ~ .nav-mobile {
+    display: flex;
+  }
+  #header {
+    /* animación X */
+  }
+  #header #menu-toggle:checked + .menu-toggle span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  #header #menu-toggle:checked + .menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  #header #menu-toggle:checked + .menu-toggle span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
   }
 }
 

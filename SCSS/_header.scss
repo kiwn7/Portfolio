@@ -6,6 +6,23 @@
   justify-content: center;
   padding: 1rem;
   font-size: 1.1rem;
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+
+  .nav-desktop {
+    display: flex;
+  }
+
+  button.menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
 
   nav {
     background: linear-gradient(
@@ -29,6 +46,11 @@
       display: flex;
       align-items: center;
       font-weight: 400;
+      color: #cfcfcf;
+      text-decoration: none;
+      transition:
+        0.3s ease,
+        transform 0.2s ease-in-out;
 
       &.pagina {
         font-weight: bold;
@@ -54,16 +76,9 @@
         width: auto;
       }
 
-      color: #cfcfcf;
-      text-decoration: none;
-      transition:
-        0.3s ease,
-        transform 0.2s ease-in-out;
-
       &:hover {
         color: #b3b3b3;
       }
-
     }
   }
 
@@ -90,16 +105,72 @@
     }
   }
 
-  @media (max-width:768px){
-    nav{
+  @media (max-width: 768px) {
+    nav {
       width: 90%;
       margin: 3.7rem;
       padding-right: 0;
     }
 
-    @media (max-width:425px){
-      nav{
-        width: 85% ;
+    @media (max-width: 426px) {
+      /* ocultar nav desktop */
+      .nav-desktop {
+        display: none;
+      }
+
+      /* BOTÓN HAMBURGUESA */
+      .menu-toggle {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 10000;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+      }
+
+      .menu-toggle span {
+        width: 24px;
+        height: 2px;
+        background: white;
+        transition: 0.3s;
+      }
+
+      /* menú */
+      .nav-mobile {
+        position: fixed;
+        inset: 0;
+        font-weight: 400;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(12px);
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 9000;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        border-radius: 0;
+        a {
+          margin-bottom: 6px;
+        }
+      }
+
+      /* estado abierto */
+      #menu-toggle:checked ~ .nav-mobile {
+        display: flex;
+      }
+
+      /* animación X */
+      #menu-toggle:checked + .menu-toggle span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      #menu-toggle:checked + .menu-toggle span:nth-child(2) {
+        opacity: 0;
+      }
+      #menu-toggle:checked + .menu-toggle span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
       }
     }
   }

@@ -6,14 +6,31 @@
       crossorigin="anonymous"
     ></script>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Presentacion</title>
-    <link rel="stylesheet" href="css​/main.css" />
+    <link rel="stylesheet" href="css​/main.css">
   </head>
 
   <body>
     <header id="header">
-      <nav>
+      <input type="checkbox" id="menu-toggle" hidden>
+
+<label for="menu-toggle" class="menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+</label>
+      <!-- NAV MOBILE -->
+  <nav class="nav-mobile">
+  <div class="menu-panel">
+    <a href="#main">Inicio</a>
+    <a href="#sobreMi">Sobre mi</a>
+    <a href="#proyectos">Mis Proyectos</a>
+    <a href="#contacto">Contáctame</a>
+  </div>
+</nav>
+
+      <nav class="nav-desktop">
         <a href="#main"><img src="img/icon.png" alt="Home" /></a>
         <a href="#sobreMi" class="pagina">Sobre mi</a>
         <a href="#proyectos">Mis Proyectos</a>
@@ -33,7 +50,11 @@
       <section class="presentacion">
         <div class="saludo">
           <h2 class="titulo">HELLO THERE</h2>
-          <img src="img/waving-hand-emoji.webp" class="wave" alt="imagen de mano saludando">
+          <img
+            src="img/waving-hand-emoji.webp"
+            class="wave"
+            alt="imagen de mano saludando"
+          />
         </div>
         <div class="typed-wrapped">
           <span id="typed"></span>
@@ -46,20 +67,22 @@
           <img src="img/Agustín.png" alt="foto de Agustín" />
           <div class="textos">
             <h2 class="titulo">
-              <span>UN POCO <b>SOBRE MÍ</b></span> <span>Y LO QUE ME MUEVE🚀</span>
+              <span>UN POCO <b>SOBRE MÍ</b></span>
+              <span>Y LO QUE ME MUEVE🚀</span>
             </h2>
             <p>
-              Me gusta crear soluciones donde la <b>lógica</b>, el <b>diseño</b> y la
-              <b>eficiencia</b> trabajen juntas. Soy meticuloso por naturaleza, y
-              estudiar <b>Ingeniería en Sistemas</b> me ayudó a transformar esa forma
-              de pensar en una manera clara y ordenada de hacer Desarrollo
-              Web.
+              Me gusta crear soluciones donde la <b>lógica</b>, el
+              <b>diseño</b> y la <b>eficiencia</b> trabajen juntas. Soy
+              meticuloso por naturaleza, y estudiar
+              <b>Ingeniería en Sistemas</b> me ayudó a transformar esa forma de
+              pensar en una manera clara y ordenada de hacer Desarrollo Web.
             </p>
             <p>
-              Me motivan los <b>desafíos</b> que me obligan a <b>aprender</b> algo nuevo y a
-              salir de la rutina. Disfruto el proceso, el <b>esfuerzo</b> que hay
-              detrás de cada proyecto y la sensación de estar <b>explorando</b> algo
-              distinto en cada etapa del camino.
+              Me motivan los <b>desafíos</b> que me obligan a
+              <b>aprender</b> algo nuevo y a salir de la rutina. Disfruto el
+              proceso, el <b>esfuerzo</b> que hay detrás de cada proyecto y la
+              sensación de estar <b>explorando</b> algo distinto en cada etapa
+              del camino.
             </p>
           </div>
         </div>
